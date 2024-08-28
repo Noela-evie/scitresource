@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <div class="navbar">
+        <span class="menu-icon" onclick="toggleDrawer()">☰ Menu</span>
+        <h2>Welcome to SCIT Source</h2>
+        <a href = "index.html"><span class="logout-icon"><img id = 'logout' src = "logout.png"></span></a>
+    </div>
+    <div class="drawer" id="drawer">
+        <ul>
+            <li><a><b>Dashboard</b></a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Lecturers</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#management">Management</a></li>
+        </ul>
+        </div>
+        <div id = "profilepic">
+            <img id = "profilepicsize" src = "profilepic.png">
+        </div>
+    <div class="dashboard">
+        <h1>Admin Dashboard</h1>
+        <div class="profile" id="profile">
+            <h2>Profile</h2>
+            <p><b>Name:</b> Dr. Birungi Melisa</p>
+            <p><b>Admin ID:</b> A24000</p>
+            <p><b>College Name:</b> College of Computing and Information Sciences</p>
+            <p><b>School:</b> School of Computing and Informatics Technology</p>
+            <p><b>Department</b> IT Dept.</p>
+
+        </div>
+        <div class="resources" id="management">
+            <h2>Management</h2>
+            <ul>
+                <li><a href="#">Manage Students</a></li>
+                <li><a href="#">Manage Lecturers</a></li>
+                <li><a href="#">Manage Courses</a></li>
+                <li><a href="#">Manage Course Units</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

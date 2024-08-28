@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - SCIT Source</title>
+    <link rel="stylesheet" href="aboutus.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <span class="menu-icon" onclick="toggleDrawer()">☰ Menu</span>
+      <ul class="navbar-links">
+        <li><a href="student.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li>
+          <span class="notification-icon"
+            ><img id="notificationicon" src="notification.png"
+          /></span>
+        </li>
+        <li>
+          <a href="index.html"
+            ><span class="logout-icon"
+              ><img id="logout" src="logout.png" /></span
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <div class="drawer-profile">
+        <img
+          class="drawer-profile-pic"
+          src="profilepic.png"
+          alt="Profile Picture"
+        />
+      </div>
+      <ul>
+        <li>
+          <a><b>Dashboard</b></a>
+        </li>
+        <li><a href="student.html">Home</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#values">Values</a></li>
+      </ul>
+    </div>
+    <br /><br /><br />
+    <div class="main-content" id="main-content">
+      <div class="history-section">
+        <div class="history-text-left">
+          <p>
+            <strong>Our History</strong><br />SCIT Resource has been empowering
+            students with efficient academic management tools since 2010.
+          </p>
+        </div>
+        <div class="logo-centered">
+          <a href="index.html"><img id="logo" src="logo.png" alt="Logo" /></a>
+        </div>
+        <div class="history-text-right">
+          <p>
+            <strong>Our Legacy</strong><br />SCIT Resource is proud to have
+            contributed to the success of over 5,000 students worldwide.
+          </p>
+        </div>
+      </div>
+
+      <div class="mission-vision-container">
+        <div class="mission" id="mission">
+          <img id="mission-image" src="mission.jpg" alt="Mission Image" />
+          <div class="content">
+            <h2>Our Mission</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="vision" id="vision">
+          <img id="vision-image" src="vision.jpg" alt="Vision Image" />
+          <div class="content">
+            <h2>Our Vision</h2>
+            <p>
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="team" id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="teammember1.jpg" alt="Team Member 1" />
+            <h3>Prof. Kigozi John</h3>
+            <p>Founder & Academic Director</p>
+          </div>
+          <div class="team-member">
+            <img src="teammember3.jpg" alt="Team Member 2" />
+            <h3>Dr. Birungi Victoria</h3>
+            <p>Program Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="teammember4.jpg" alt="Team Member 3" />
+            <h3>Dr. Haruna Jason</h3>
+            <p>Lead Developer</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="values" id="values">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+          <div class="value">
+            <img src="excellence.png" alt="Excellence" />
+            <h4>Excellence</h4>
+            <p>
+              We strive for the highest academic standards and excellence in
+              everything we do.
+            </p>
+          </div>
+          <div class="value">
+            <img src="innovation.png" alt="Innovation" />
+            <h4>Innovation</h4>
+            <p>
+              We embrace new technologies and innovative methods to support
+              learning.
+            </p>
+          </div>
+          <div class="value">
+            <img src="community.png" alt="Community" />
+            <h4>Community</h4>
+            <p>
+              We believe in the power of a strong, connected community to help
+              students succeed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 SCIT Source. All Rights Reserved.</p>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

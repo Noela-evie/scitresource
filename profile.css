@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f7fa;
+    padding: 20px;
+    color: #354052;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #354052;
+    transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+    color: #0944b1;
+}
+
+/* Profile Section Styles */
+.profile-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 12px;
+    margin: 40px 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    color: #0044cc;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.profile-info strong {
+    color: #0044cc;
+    font-weight: bold;
+}
+
+/* Progress Section Styles */
+.progress-section {
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+    text-align: center;
+    border-radius: 12px;
+    margin: 40px 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.progress-section h2 {
+    margin-bottom: 20px;
+    color: #0044cc;
+    font-size: 24px;
+}
+
+.progress-chart img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Chat Section Styles */
+.chat-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    margin: 40px 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chat-section h2 {
+    margin-bottom: 20px;
+    color: #0044cc;
+    font-size: 24px;
+}
+
+.chat-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-input input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: #002f8a;
+}

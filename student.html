@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="profile">
+        <img src="profilepic.png" alt="Profile Picture" />
+        <h2>Nampiima Esther</h2>
+      </div>
+      <nav class="nav-links">
+        <a href="profile.html" class="nav-item">Profile</a>
+        <a href="#dashboard" class="nav-item">Dashboard</a>
+        <a href="#assignments" class="nav-item">Assignments</a>
+        <a href="#resources" class="nav-item">Resources</a>
+        <a href="#contactus" class="nav-item">Contact us</a>
+      </nav>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <h1>Welcome, Student Name</h1>
+        <div class="header-links">
+          <a href="student.html">Home</a>
+          <a href="#notifications">Notifications</a>
+          <a href="profile.html">Profile</a>
+          <a href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <!-- DASHBOARD -->
+
+      <section id="dashboard" class="content-section">
+        <h2>Dashboard</h2>
+        <p>Your overview for the semester.</p>
+
+        <section id="dashboard" class="dashboard">
+          <div class="overview-cards">
+            <div class="card">
+              <h3>Assignments</h3>
+              <p>3 Pending</p>
+            </div>
+            <div class="card">
+              <h3>Resources</h3>
+              <p>5 New</p>
+            </div>
+            <div class="card">
+              <h3>Notifications</h3>
+              <p>2 Unread</p>
+            </div>
+          </div>
+
+          <div class="recent-assignments">
+            <h2>Recent Assignments</h2>
+            <ul>
+              <li>
+                <span>Assignment 1: <strong>Research Paper</strong></span>
+                <span>Type: Individual</span>
+                <span>Due: 2024-09-15</span>
+              </li>
+              <li>
+                <span>Assignment 2: <strong>Case Study</strong></span>
+                <span>Type: Individual</span>
+                <span>Due: 2024-09-20</span>
+              </li>
+              <li>
+                <span>Assignment 3: <strong>Group Project</strong></span>
+                <span>Type: Group</span>
+                <span>Due: 2024-09-25</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="available-resources">
+            <h2>Available Resources</h2>
+            <ul>
+              <li>
+                <a href="resource1.pdf"
+                  >Resource 1: Application Development Lecture 1</a
+                >
+              </li>
+              <li>
+                <a href="resource2.pdf"
+                  >Resource 2: Intergrative Programming and Tech Chapter 4</a
+                >
+              </li>
+              <li>
+                <a href="resource3.pdf"
+                  >Resource 3: Intergrative Programming and Tech Chapter 3</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="notifications">
+            <h2>Notifications</h2>
+            <ul>
+              <li>
+                Group assignment submited: Problem Statement - Final Year
+                Project
+              </li>
+              <li>New resource added: Introduction to Intelligent systems</li>
+            </ul>
+          </div>
+
+          <div class="upcoming-deadlines">
+            <h2>Upcoming Deadlines</h2>
+            <ul>
+              <li>Research Paper - 2024-09-15</li>
+              <li>Case Study - 2024-09-20</li>
+              <li>Group Project - 2024-09-25</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- ASSIGNMENTS -->
+
+      <div class="content-section" id="assignments">
+        <h2>Assignments</h2>
+        <p>View and submit your assignments.</p>
+        <div class="assignment-section">
+          <h3 onclick="toggleAssignment('individual')">
+            Individual Assignments
+          </h3>
+          <div id="individual" class="assignment-content">
+            <div class="assignment-item">
+              <h4 onclick="toggleQuestions('individual-assignment-1')">
+                Assignment 1: Research Paper
+              </h4>
+              <div id="individual-assignment-1" class="questions">
+                <p>1. Write a research paper on AI/ machine learning.</p>
+                <p>Hard copies to be submited in the lecture.</p>
+              </div>
+            </div>
+            <div class="assignment-item">
+              <h4 onclick="toggleQuestions('individual-assignment-2')">
+                Assignment 2: Case Study(User Interface Design)
+              </h4>
+              <div id="individual-assignment-2" class="questions">
+                <p>
+                  1. As a UI designer, design a mobile app design for a food
+                  delivery application .
+                </p>
+                <p>
+                  2. Discuss why you used the tool you chose for the UI design?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="assignment-section">
+          <h3 onclick="toggleAssignment('group')">Group Assignments</h3>
+          <div id="group" class="assignment-content">
+            <div class="assignment-item">
+              <h4 onclick="toggleQuestions('group-assignment-1')">
+                Group Project: Application development
+              </h4>
+              <div id="group-assignment-1" class="questions">
+                <p>1. Outline the architecture of a web application.</p>
+                <p>2. How would you handle user authentication in a web app?</p>
+              </div>
+            </div>
+            <div class="assignment-item">
+              <h4 onclick="toggleQuestions('group-assignment-2')">
+                Group Research: Intergrative Programming and Tech
+              </h4>
+              <div id="group-assignment-2" class="questions">
+                <p>1. What are APIs and how are they used?</p>
+                <p>
+                  2. Discuss the process of using an API for front-end to
+                  back-end intergration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESOURCES -->
+
+      <section id="resources" class="content-section">
+        <h2>Resources</h2>
+        <p>Access all your reading material here!.</p>
+        <div class="course-container">
+          <!-- Course Card Template -->
+          <div class="course-card">
+            <h3>Integrative Prog and Tech</h3>
+            <div class="resource-group">
+              <!-- Notes Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('integrative-programming-notes')"
+              >
+                Notes
+              </button>
+              <div id="integrative-programming-notes" class="resource-content">
+                <div class="resource-item">
+                  <a href="#">View Note 1</a> | <a href="#">Download</a>
+                </div>
+                <div class="resource-item">
+                  <a href="#">View Note 2</a> | <a href="#">Download</a>
+                </div>
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Textbooks Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('integrative-programming-textbooks')"
+              >
+                Textbooks
+              </button>
+              <div
+                id="integrative-programming-textbooks"
+                class="resource-content"
+              >
+                <div class="resource-item">
+                  <a href="#">View Textbook 1</a> | <a href="#">Download</a>
+                </div>
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Past Papers Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('integrative-programming-pastpapers')"
+              >
+                Past Papers
+              </button>
+              <div
+                id="integrative-programming-pastpapers"
+                class="resource-content"
+              >
+                <div class="resource-item">
+                  <a href="#">View Past Paper 1</a> | <a href="#">Download</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Course Card Template -->
+
+          <!-- Repeat for other courses with different IDs -->
+          <!-- Application Development -->
+          <div class="course-card">
+            <h3>Application Development</h3>
+            <div class="resource-group">
+              <!-- Notes Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('application-development-notes')"
+              >
+                Notes
+              </button>
+              <div id="application-development-notes" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Textbooks Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('application-development-textbooks')"
+              >
+                Textbooks
+              </button>
+              <div
+                id="application-development-textbooks"
+                class="resource-content"
+              >
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Past Papers Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('application-development-pastpapers')"
+              >
+                Past Papers
+              </button>
+              <div
+                id="application-development-pastpapers"
+                class="resource-content"
+              >
+                <!-- Add resources here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- User Interface Design -->
+          <div class="course-card">
+            <h3>User Interface Design</h3>
+            <div class="resource-group">
+              <!-- Notes Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('ui-design-notes')"
+              >
+                Notes
+              </button>
+              <div id="ui-design-notes" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Textbooks Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('ui-design-textbooks')"
+              >
+                Textbooks
+              </button>
+              <div id="ui-design-textbooks" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Past Papers Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('ui-design-pastpapers')"
+              >
+                Past Papers
+              </button>
+              <div id="ui-design-pastpapers" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project -->
+          <div class="course-card">
+            <h3>Project</h3>
+            <div class="resource-group">
+              <!-- Notes Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('project-notes')"
+              >
+                Notes
+              </button>
+              <div id="project-notes" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Textbooks Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('project-textbooks')"
+              >
+                Textbooks
+              </button>
+              <div id="project-textbooks" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Past Papers Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('project-pastpapers')"
+              >
+                Past Papers
+              </button>
+              <div id="project-pastpapers" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Intelligent Systems -->
+          <div class="course-card">
+            <h3>Intelligent Systems</h3>
+            <div class="resource-group">
+              <!-- Notes Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('intelligent-systems-notes')"
+              >
+                Notes
+              </button>
+              <div id="intelligent-systems-notes" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Textbooks Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('intelligent-systems-textbooks')"
+              >
+                Textbooks
+              </button>
+              <div id="intelligent-systems-textbooks" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+
+              <!-- Page Break -->
+              <br />
+
+              <!-- Past Papers Section -->
+              <button
+                class="resource-toggle"
+                onclick="toggleResources('intelligent-systems-pastpapers')"
+              >
+                Past Papers
+              </button>
+              <div id="intelligent-systems-pastpapers" class="resource-content">
+                <!-- Add resources here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-arrows">
+          <button class="arrow-left" onclick="scrollCourses(-1)">
+            &#9664;
+          </button>
+          <button class="arrow-right" onclick="scrollCourses(1)">
+            &#9654;
+          </button>
+        </div>
+      </section>
+
+      <!-- CONTACT US -->
+
+      <section id="contactus" class="content-section">
+        <h2>Contact Us</h2>
+        <p>Contact us for help and support.</p>
+
+        <div class="contact-info">
+          <p>Email: <a href="mailto:scitresource@info">scitresource@info</a></p>
+          <p>Phone: +256 771 234 567</p>
+        </div>
+
+        <div class="social-media">
+          <a href="#"
+            ><img src="icon2.png" alt="Facebook Icon" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icon4.png" alt="X Icon" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icon5.png" alt="Instagram Icon" class="social-icon"
+          /></a>
+        </div>
+
+        <div class="message-form">
+          <h3>Send a Message to the Admin</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="#dashboard">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="#resources">Resources</a>
+            <a href="#contactus">Contact Us</a>
+          </div>
+
+          <div class="footer-social-media">
+            <a href="#"
+              ><img src="icon2.png" alt="Facebook Icon" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icon4.png" alt="X Icon" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icon5.png" alt="Instagram Icon" class="social-icon"
+            /></a>
+          </div>
+
+          <div class="footer-info">
+            <p>&copy; 2024 SCIT Resources. All rights reserved.</p>
+            <p>
+              Email: <a href="mailto:scitresource@info">scitresource@info</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

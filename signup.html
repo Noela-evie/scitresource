@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCIT Source - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sign Up</h1>
+        <form id="signupForm" action = "" method = "POST">
+            <div class = "logininput">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId" placeholder="Student number or Lecturer ID" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span class="toggle-password" onclick="togglePassword('password', 'eyeicon')"><img id = "eyeicon" src="eye-closed.svg"></span>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p class = "Par1">Already have an account? <a href="index.html">Login</a></p>
+    </div>
+    <script src="server.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
